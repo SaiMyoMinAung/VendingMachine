@@ -28,6 +28,12 @@ var lists = [{
 ];
 
 var vendingButton = document.getElementById("vendingButton");
+var vendingItems = document.getElementById("vendingItems");
+
+vendingItems.addEventListener('keyup', function(e){
+    // alert('keydown');
+    this.value = Math.abs(e.target.value)
+});
 
 vendingButton.addEventListener("click", function () {
     var vendingSeletbox = document.getElementById("vendingSelectbox");
@@ -38,7 +44,7 @@ vendingButton.addEventListener("click", function () {
         return
     }
 
-    var vendingItems = document.getElementById("vendingItems");
+    
     var vendingItemsValue = vendingItems.value
 
     if (vendingItemsValue === "" || vendingItemsValue == 0) {
