@@ -26,9 +26,9 @@ var lists = [{
         no_of_items: 2
     }
 ];
-
-var vendingButton = document.getElementById("vendingButton");
-var vendingItems = document.getElementById("vendingItems");
+const modalHandleButton = document.getElementById("warningModal");
+const vendingButton = document.getElementById("vendingButton");
+const vendingItems = document.getElementById("vendingItems");
 
 vendingItems.addEventListener('keyup', function(e){
     // alert('keydown');
@@ -40,7 +40,7 @@ vendingButton.addEventListener("click", function () {
     var vendingSelectboxValue = vendingSeletbox.value;
 
     if (vendingSelectboxValue === '') {
-        alert('please select item')
+        modalHandleButton.click()
         return
     }
 
